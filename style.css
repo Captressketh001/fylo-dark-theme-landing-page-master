@@ -137,6 +137,7 @@ text-align: center;
     position: relative;
     top: 100px;
     padding: 10px 50px 10px 50px;
+    border-radius: 5px;
 }
 .sign-in input[type='email']{
     width: 72%;
@@ -156,17 +157,31 @@ text-align: center;
 
 }
 footer{
-    display: grid;
-    height: 100%;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(1,250px);
-    grid-gap: 10px;
     background-color: hsl(216, 53%, 9%);
-    /* justify-content: flex-end; */
-    /* padding: 120px; */
 }
-footer .fylo{
-
+.footer-logo img{
+    padding: 120px 110px 26px 110px;
+}
+.footer-nav{
+    display: grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(1, 250px);
+    padding-left: 115px;
+}
+.footer-1{
+    display: flex;
+}
+.footer-1 small{
+    width: 60%;
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li{
+    padding-bottom: 20px;
+}
+footer i{
+    padding-right: 10px;
 }
 .attribution { 
     font-size: 11px; 
