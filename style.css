@@ -1,103 +1,145 @@
-body{
-    /* background-image: url(./images/bg-curvy-desktop.svg); */
-    background-color: hsl(217, 28%, 15%);
+html, body{
+    height: 100%;
+    background-color: hsl(218, 28%, 13%);
+    color: #fff;
     margin: 0 auto;
-    color: hsl(0, 0%, 100%);
-    Font-size: 14px;
 }
 nav{
-    height: 70px;
+    height: 100%;
+}
+.container{
     display: flex;
-    margin-top: 30px;
-}
-nav .logo{
-    width: 30%;
-    text-align: center;
-}
-nav .navigation{
-    width: 70%;
-}
-nav .navigation ul{
     list-style: none;
-    margin-left: 450px;
 }
-nav .navigation ul li{
-    display: inline;
-    padding-right: 50px;
-    /* margin-left: 40px; */
+.container > li > img{
+    width: 200px;
 }
-main{
-    background-image: url(./images/bg-curvy-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: 7px 617px;
-    background-size: contain;
+.container > .logo{
+    margin-left: auto;
+}
+.container > .feature{
+    padding-top: 15px;
+    padding-right: 30px;
+}
+@media screen and (max-width: 768px){
+    .container > .feature{
+        padding-top: 20px;
+        padding-right: 10px;
+    }
+    .container > li > img{
+        width: 100px;
+        height: 30px;
+        padding-top: 15px;
+    }
+}
+.intro-container{
+    display: flex;
+    background-color: hsl(217, 28%, 15%);
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 0 25em;
+}
+.intro-container > div{
+    text-align: center;
+    flex: 1 1 25%;
 }
 
-main .intro{
-    display: grid;
-    height: 800px;
-    justify-content: center;
-    align-content: center;
-}
-.intro-info{
-    height: 100%;
-    text-align: center;
-    
-}
-.intro-info h1{
+.intro-container > div > img{
     width: 50%;
-    margin-left: 150px;
-    position: relative;
-    left: 65px;
-    
+    /* height: 100%; */
+    object-fit: cover;
 }
-.intro-info p{
-    width: 44%;
-    
-    position: relative;
-    left: 233px;
+@media screen and (max-width: 1200px){
+    .intro-container{
+        padding: 0;
+    }
 }
-.feature{
-   display: grid;
-   height: 100%;
-   grid-gap: 60px;
-   grid-template-columns: repeat(2,350px);
-   grid-template-rows: repeat(2,200px);
-   justify-content: center;
-   align-content: center;
+@media screen and (max-width: 768px){
+   .intro-container{
+       padding: 0 2em;
+   }
 }
-.feature-info{
-text-align: center;
-}
-.feature-info img{
-    width: 20%;
-    height: 70px;
-}
-.productive-container{
+@media screen and (max-width: 360px){
+    .intro-container{
+        padding: 0;
+    }
+ }
+.features{
     display: grid;
-   height: 100%;
-   grid-gap: 60px;
-   grid-template-columns: repeat(2,550px);
-   grid-template-rows: repeat(2,200px);
-   justify-content: center;
-   align-content: center;
+    height: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 2em;
+    justify-items: end;
+    align-items: center;
+    text-align: center;
+    padding: 10em;
 }
-.productive-2{
-    margin-top: 126px;
+.features > div{
+    padding-bottom: 2em;
 }
+@media screen and (max-width: 768px){
+    .features{
+        grid-template-columns: 1fr;
+        padding: 2.5em;
+    }
+}
+.teams{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+.teams > div{
+    padding: 1em;
+}
+.teams > div > img{
+    width: 100%;
+}
+.teams > div > h1{
+    width: 40%;
+    padding-top: 1.5em;
+}
+@media screen and (max-width: 768px){
+    .teams{
+        grid-template-columns: 1fr;
+    }
+    .teams > div > h1{
+        width: 100%;
+        padding-top: 0.5em;
+    }
+}
+@media screen and (max-width: 360px){
+    .teams{
+        grid-template-columns: 1fr;
+    }
+}
+
 .quote-section{
     display: grid;
    height: 100%;
    grid-gap: 30px;
-   grid-template-columns: repeat(3,350px);
-   grid-template-rows: repeat(1,200px);
+   grid-template-columns: repeat(3,1fr);
+   grid-auto-rows: minmax(200px, auto);
    justify-content: center;
    align-content: center;
-   /* background-image: url(./images/bg-quotes.png);
+    background-image: url(../fylo-dark-theme-landing-page-master/fylo-dark-theme-landing-page-master/images/bg-quotes.png);
    background-repeat: no-repeat;
-   background-position:0% 0%;
-   background-size: auto; */
-   margin-top: 70px;
+   background-position:4% 7px;
+   background-size: auto;
+   margin-top: 110px;
+   padding: 40px;
+}
+@media screen and (max-width: 768px){
+    .quote-section{
+        grid-template-columns: 1fr;
+        padding: 1em;
+        background-position: 1% -6px;
+    }
+    /* .quotes{
+        padding: 50em;
+    } */
 }
 .quotes{
     background-color: hsl(219, 30%, 18%);
@@ -118,28 +160,27 @@ text-align: center;
 .quote p small{
     display: block;
 }
-.sign-in-container{
-    display: grid;
-   height: 100%;
-   grid-gap: 60px;
-   grid-template-columns: repeat(1,50%);
-   grid-template-rows: repeat(1,200px);
-   justify-content: center;
-   align-content: center;
-   background-color: hsl(218, 28%, 13%);
-   /* margin-top: 90px; */
-   /* padding: 50px; */
-   /* align-items: center; */
-   text-align: center;
-}
+
 .sign-in{
+    display: flex;
+   /* width: 50%; */
+    /* background-color: hsl(217, 28%, 15%); */
+    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 0 4em 0 4em;
+    text-align: center;
+}
+.sign-in > div{
     background-color: hsl(217, 28%, 15%);
+    width: 50%;
+    /* padding: 0 3.5em 0 3.5em; */
     position: relative;
     top: 100px;
     padding: 10px 50px 10px 50px;
     border-radius: 5px;
 }
-.sign-in input[type='email']{
+.sign-in > div > input[type='email']{
     width: 72%;
     height: 40px;
     border: none;
@@ -147,7 +188,7 @@ text-align: center;
     outline: none;
     margin-right: 12px;
 }
-.sign-in input[type='button']{
+.sign-in div > input[type='button']{
     height: 40px;
     border: none;
     border-radius: 23px;
@@ -156,32 +197,48 @@ text-align: center;
     color: hsl(0, 0%, 100%);
 
 }
+@media screen and (max-width: 768px){
+    .sign-in > div{
+        width: 80%;
+    }
+    .sign-in div > input[type='button']{
+        width: 72%;
+        margin-top: 15px;
+    }
+    .sign-in{
+        padding: 0 0.5em 0 0.5em;
+    }
+    .sign-in > div{
+        padding: 0 1.5em 0 1.5em;
+    }
+}
 footer{
     background-color: hsl(216, 53%, 9%);
+    padding:0px 40px;
 }
-.footer-logo img{
-    padding: 120px 110px 26px 110px;
+footer > img{
+    padding-left:30px;
+    padding-top: 150px;
 }
-.footer-nav{
+.footer{
     display: grid;
-    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(1, 250px);
-    padding-left: 115px;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 }
-.footer-1{
-    display: flex;
-}
-.footer-1 small{
-    width: 60%;
-}
-.footer ul{
+.footer > div > ul{
     list-style: none;
 }
-.footer ul li{
-    padding-bottom: 20px;
-}
-footer i{
+.footer > div > ul > li > img{
+    width: 10px;
+    height: 10px;
     padding-right: 10px;
+}
+@media screen and (max-width: 768px){
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    footer{
+        padding: 0;
+    }
 }
 .attribution { 
     font-size: 11px; 
