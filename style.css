@@ -1,8 +1,14 @@
+@import url('https://fonts.google.com/specimen/Raleway)');
+@import url('https://fonts.google.com/specimen/Open+Sans');
 html, body{
+    font-family: 'Open Sans', sans-serif;
     height: 100%;
-    background-color: hsl(218, 28%, 13%);
+    background-color: hsl(217, 28%, 15%);
     color: #fff;
     margin: 0 auto;
+}
+h1, button, .container > li > a, .sign-in div > input[type='button']{
+    font-family: 'Raleway', sans-serif;
 }
 nav{
     height: 100%;
@@ -10,6 +16,7 @@ nav{
 .container{
     display: flex;
     list-style: none;
+    
 }
 .container > li > img{
     width: 200px;
@@ -20,16 +27,25 @@ nav{
 .container > .feature{
     padding-top: 15px;
     padding-right: 30px;
+    /* padding-left: 20px; */
+}
+.container > .feature > a{
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+.container > .feature > a:hover{
+    text-decoration: underline;
+    font-weight: 700;
 }
 @media screen and (max-width: 768px){
     .container > .feature{
         padding-top: 20px;
         padding-right: 10px;
     }
-    .container > li > img{
-        width: 100px;
+    .container > li > a > img{
+        width: 89px;
         height: 30px;
-        padding-top: 15px;
+        padding-top: 13px;
     }
 }
 .intro-container{
@@ -40,10 +56,15 @@ nav{
     height: 100%;
     flex-wrap: wrap;
     padding: 0 25em;
+    background-image: url(./images/bg-curvy-desktop.svg);
+    background-position: 50% 300px;
+    background-repeat: no-repeat;
 }
 .intro-container > div{
     text-align: center;
     flex: 1 1 25%;
+    /* padding-bottom: 400px; */
+  
 }
 
 .intro-container > div > img{
@@ -51,15 +72,37 @@ nav{
     /* height: 100%; */
     object-fit: cover;
 }
+.intro-container > div > button{
+        width: 50%;
+        height: 40px;
+        border: none;
+        border-radius: 23px;
+        outline: none;
+        background: linear-gradient(-45deg, hsl(198, 60%, 50%), hsl(176, 68%, 64%));
+        color: hsl(0, 0%, 100%);
+    
+}
 @media screen and (max-width: 1200px){
     .intro-container{
         padding: 0;
+        background-image: url(./images/bg-curvy-desktop.svg);
+        background-repeat: no-repeat;
     }
 }
 @media screen and (max-width: 768px){
    .intro-container{
        padding: 0 2em;
    }
+   .intro-container > div > button{
+       width: 70%;
+   }
+}
+@media screen and (max-width: 445px){
+    .intro-container{
+        background-image: url(./images/bg-curvy-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    
 }
 @media screen and (max-width: 360px){
     .intro-container{
@@ -76,10 +119,13 @@ nav{
     align-items: center;
     text-align: center;
     padding: 10em;
+    /* padding-top: 150px; */
+    background-color: hsl(218, 28%, 13%);
 }
 .features > div{
     padding-bottom: 2em;
 }
+
 @media screen and (max-width: 768px){
     .features{
         grid-template-columns: 1fr;
@@ -90,6 +136,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
+    background-color: hsl(218, 28%, 13%);
 }
 .teams > div{
     padding: 1em;
@@ -128,8 +175,9 @@ nav{
    background-repeat: no-repeat;
    background-position:4% 7px;
    background-size: auto;
-   margin-top: 110px;
+   /* margin-top: 110px; */
    padding: 40px;
+   background-color: hsl(218, 28%, 13%);
 }
 @media screen and (max-width: 768px){
     .quote-section{
@@ -170,6 +218,7 @@ nav{
     flex-wrap: wrap;
     padding: 0 4em 0 4em;
     text-align: center;
+    background-color: hsl(218, 28%, 13%);
 }
 .sign-in > div{
     background-color: hsl(217, 28%, 15%);
@@ -238,6 +287,12 @@ footer > img{
     }
     footer{
         padding: 0;
+    }
+    .social-links ul li{
+        text-align: center;
+    }
+    .social-links ul li i{
+        padding-right: 10px;
     }
 }
 .attribution { 
