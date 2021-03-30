@@ -57,7 +57,7 @@ nav{
     flex-wrap: wrap;
     padding: 0 25em;
     background-image: url(./images/bg-curvy-desktop.svg);
-    background-position: 50% 300px;
+    background-position: 100% 300px;
     background-repeat: no-repeat;
 }
 .intro-container > div{
